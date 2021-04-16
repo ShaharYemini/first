@@ -1,0 +1,21 @@
+body {
+  background: #efefef
+}
+
+h1 {
+	font-size: 50px;
+	margin: 100px 400px;
+	text-align: center;
+}
+
+label {
+  margin: auto;
+  font-size: 30px;
+  text-align: right;
+}
+
+button {
+  margin: 5px 400px;
+  font-size: 30px;
+  background-color: #3a243b
+}

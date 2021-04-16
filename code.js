@@ -1,5 +1,5 @@
 function start() {
-	document.getElementById('people').innerHTML = Object.keys(original_data)
+	document.getElementById('people').innerHTML = Object.keys(original_data).join(",  ")
 	current_question = get_question(original_data)
 	document.getElementById('question').innerHTML = current_question
 }
@@ -14,7 +14,7 @@ function abs(a) {
 
 function load_data() {
 	ret = {}
-	names = document.getElementById('people').innerHTML.split(",")
+	names = document.getElementById('people').innerHTML.split(",  ")
 	a = []
 	Object.keys(original_data).forEach(c => {
 		if (!(c in names)) {
@@ -106,7 +106,7 @@ function decrease(data, question, answer) {
 	to_pop.forEach(p => {
 		delete data[p]
 	})
-	document.getElementById('people').innerHTML = Object.keys(data)
+	document.getElementById('people').innerHTML = Object.keys(data).join(",  ")
 	return data
 }
 
@@ -134,7 +134,7 @@ function yes() {
 function no() {
 	data = load_data()
 	data = decrease(data, current_question, false)
-	used_questions.push((current_question, false))
+	used_questions[current_question] = false
 	current_question = get_question(data)
 	if (current_question) {
 		used_questions[current_question] = null
@@ -147,7 +147,6 @@ function no() {
 
 function dontKnow() {
 	data = load_data()
-	used_questions.push((current_question, false))
 	current_question = get_question(data)
 	used_questions[current_question] = null
 	document.getElementById('question').innerHTML = current_question
