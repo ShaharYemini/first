@@ -56,7 +56,7 @@ function separator(data, question) {
 
 function get_question(data) {
 	if (Object.keys(data).length == 1) {
-		return "האם הדמות שלך היא " + Object.keys(data)[0]
+		return "האם הדמות שלך היא " + Object.keys(data)[0] + " ?"
 	}
 	questions = new Set()
 	
