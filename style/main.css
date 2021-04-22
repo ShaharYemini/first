@@ -13,8 +13,51 @@ label {
   margin: auto;
   font-size: 30px;
   text-align: right;
+  position: fixed;
+
 }
 
+hr {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+div#people_container {
+  background-color: violet;
+  color: yellow;
+}
+div .animation_container {
+  display: flex;
+  justify-content: center;
+}
+.one {
+  position: fixed;
+  top: 40%;
+  left: 10%;
+}
+.two {
+  position: fixed;
+  top: 40%;
+  left: 80%;
+}
+
+div.cool {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid;
+    border-radius: 50%;
+    animation: circle 2s ease-in-out infinite alternate;
+}
+
+div.cool2 {
+    height: 30px;
+    width: 30px;
+    border: 10px solid;
+    animation: square 4s ease-in-out infinite forwards;
+}
 button {
   margin: 1% auto;
   font-size: 30px;
@@ -26,17 +69,18 @@ button {
   cursor: pointer;
   color:#ffffff;
   font-family:Arial;
-  padding:16px 44px;
+  padding:20px 44px;
   text-decoration:none;
   text-shadow:0px 1px 6px #2f6627;
 }
+
 button:active {
 	position:relative;
 	top:1px;
 }
 button:hover {
 	transition: 1s;
-	animation: anim 1s ease-in-out infinite alternate;
+	animation: anim 2s ease-in-out infinite alternate;
 }
 
 .green {
@@ -69,9 +113,56 @@ button:hover {
 	100% { transform: scale(1.1); }
 }
 
+@keyframes circle {
+  0% {
+    border-color: blue;
+    transform: scale(1);
+  }
+  20% { 
+    transform: scale(1.5);
+    border-color: dodgerblue;
+  }
+  40% { 
+    transform: scale(1.1);
+    border-color: navy  
+  }
+  60% { 
+    transform: scale(1.4);
+    border-color: steelblue
+  }
+  80% { 
+    transform: scale(1);
+    border-color: blue
+  }
+  100% { 
+    transform: scale(1.2);
+    border-color: deepskyblue
+  }
+}
 
-
-
+@keyframes square {
+  20% { border-color: blueviolet;
+        border-width: 20px;
+        transform: rotate(20deg);
+      }
+  40% { border-color: darkviolet;
+        border-width: 10px;
+        transform: rotate(-40deg);
+      }
+  60% { border-color: slateblue;
+        border-width: 30px;
+        transform: rotate(340deg);
+      }
+  80% { border-color: darkmagenta;
+        border-width: 5px;
+        transform: rotate(70deg);
+      }
+  90% {  border-color: indigo }
+  100% { border-color: indigo;
+        border-width: blueviolet;
+        transform: rotate(0);
+      }        
+}
 
 
 

@@ -5,16 +5,36 @@
 	<link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-  <h1 id="question" >
+  	<h1 id="question" >
   	לחצו על 'התחלה' כדי להתחיל
-</h1><br />
+	</h1>
+	<br />
 
-<button id="yes_button" class="button green" onclick="yes()">כן</button>
-<button id="no_button" class="button red" onclick="no()">לא</button>
-<button id="dont_know" class="button grey" onclick="dontKnow()">לא יודע</button>
-<button id="start" class="button purple" onclick="start()">התחלה</button> <br>
- <label id="people" ></label>
-<script src="code.js"></script>
-<script src="data.js"></script>
+	<hr>
+
+	<div class="animation_container one">
+		<div class="cool">
+		<div class="cool2"></div></div>
+	</div>
+
+	<div class="animation_container two">
+		<div class="cool">
+		<div class="cool2"></div></div>
+	</div>
+
+	<button id="yes_button" class="button green" onclick="yes()">כן</button>
+	<button id="no_button" class="button red" onclick="no()">לא</button>
+	<button id="dont_know" class="button grey" onclick="dontKnow()">לא יודע</button>
+	<button id="start" class="button purple" onclick="start()">התחלה</button> <br>
+
+	<hr>
+
+	<div id = "people_container">
+ 		<label id="people"></label>
+	</div>
+	
+	<script src="code.js"></script>
+	<script src="data.js"></script>
+	
 </body>
 </html>
