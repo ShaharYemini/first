@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Harry Potter Akinator </title>
+	<title>Harry Potter Akinator</title>
 	<link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-  	<h1 id="question" >
-  	לחצו על 'התחלה' כדי להתחיל
-	</h1>
-	<br />
+	<div id = "bar">
+		<button></button>
+	</div>
+	<h1>Harry Potter Akinator</h1>
+	<div class="container">
+		<div id = "11" class="animation_container">
+			<div class = "cool">
+				<div class = "cool2"></div>
+			</div>
+		</div>
+
+  		<h2 id="question" ></h2>
+  		
+  		<div id = "12" class="animation_container">
+			<div class = "cool">
+				<div class = "cool2"></div>
+			</div>
+		</div>
+  	</div>
 
 	<hr>
 
-	<div class="animation_container one">
-		<div class="cool">
-		<div class="cool2"></div></div>
+	<div class = "container">
+		<button id="yes_button" class="button" onclick="yes()">כן</button>
+		<button id="no_button" class="button" onclick="no()">לא</button>
+		<button id="dont_know" class="button" onclick="dontKnow()">לא יודע</button>
+		<button id="start" class="button" onclick="start()">התחלה</button> 
 	</div>
-
-	<div class="animation_container two">
-		<div class="cool">
-		<div class="cool2"></div></div>
-	</div>
-
-	<button id="yes_button" class="button green" onclick="yes()">כן</button>
-	<button id="no_button" class="button red" onclick="no()">לא</button>
-	<button id="dont_know" class="button grey" onclick="dontKnow()">לא יודע</button>
-	<button id="start" class="button purple" onclick="start()">התחלה</button> <br>
 
 	<hr>
 
 	<div id = "people_container">
  		<label id="people"></label>
 	</div>
-	
 	<script src="code.js"></script>
 	<script src="data.js"></script>
 	

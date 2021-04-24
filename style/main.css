@@ -1,12 +1,26 @@
 
 body {
-  background: #efefef
+  background: #202020
 }
 
 h1 {
+  font-size: 150px;
+  text-align: center;
+  background-image: url(https://media.giphy.com/media/8uk5BEvTsZ7Og/giphy.gif);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: round;
+  font-family: Harry Potter;
+  letter-spacing: 15px;
+  text-shadow: 0 0 30px #c0c0c0;
+  opacity: 1;
+  animation: title 3s ease-in-out 1 forwards;
+}
+h2 {
 	font-size: 50px;
 	margin: 100px 400px;
 	text-align: center;
+  color: white;
 }
 
 label {
@@ -22,13 +36,23 @@ hr {
   border-radius: 5px;
 }
 
+div#bar {
+  background-image: linear-gradient(to right, green, white);
+  display: flex;
+  
+}
+
+div.container {
+  display: flex;
+}
+
 div#people_container {
-  background-color: violet;
-  color: yellow;
+  color: #337b5d;
 }
 div .animation_container {
   display: flex;
   justify-content: center;
+  margin: 5% auto;
 }
 .one {
   position: fixed;
@@ -59,55 +83,48 @@ div.cool2 {
     animation: square 4s ease-in-out infinite forwards;
 }
 button {
-  margin: 1% auto;
+  margin: auto;
   font-size: 30px;
-  background-color: #3a243b
-  border-radius: 10px;
-  width: auto;
+  border-radius: 10px 10px;
+  width: 15%;
   border-width: 0; 
-  display: block;
+  display: inline-grid;
   cursor: pointer;
   color:#ffffff;
-  font-family:Arial;
+  font-family: Arial;
   padding:20px 44px;
-  text-decoration:none;
-  text-shadow:0px 1px 6px #2f6627;
+
 }
 
-button:active {
-	position:relative;
-	top:1px;
-}
 button:hover {
 	transition: 1s;
 	animation: anim 2s ease-in-out infinite alternate;
 }
 
-.green {
-	background-color:#44c767;
-}
-.green:hover {
+
+#yes_button {
 	background-color:#5cbf2a;
 }
-.red {
-	background-color:#ef5050;
-}
-.red:hover {
+
+#no_button {
 	background-color:#df2323;
 }
-.grey {
-	background-color:#aaaaaa;
+#dont_know {
+	background-color:#999999;
 }
-.grey:hover {
-	background-color:#bbbbbb;
-}
-.purple {
+#start {
 	background-color:#aa11aa;
 }
-.purple:hover {
-	background-color:#bb22bb;
+
+@font-face {
+  font-family: Harry Potter;
+  src: url("HarryPotterFont.ttf");
 }
 
+@font-face {
+  font-family: Gan;
+  src: url("Gan.ttf");
+}
 
 @keyframes anim {
 	100% { transform: scale(1.1); }
@@ -140,6 +157,7 @@ button:hover {
   }
 }
 
+
 @keyframes square {
   20% { border-color: blueviolet;
         border-width: 20px;
@@ -158,14 +176,23 @@ button:hover {
         transform: rotate(70deg);
       }
   90% {  border-color: indigo }
-  100% { border-color: indigo;
-        border-width: blueviolet;
+  100% { border-color: blueviolet;
+        border-width: 10px;
         transform: rotate(0);
       }        
 }
 
+@keyframes title {
+  0% {
+    opacity: 0;
+    letter-spacing: 25px;
+  }
 
-
+  100% {
+    opacity: initial;
+    letter-spacing: initial;
+  }
+}
 
 
 

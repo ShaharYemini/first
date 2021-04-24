@@ -1,4 +1,8 @@
 function start() {
+	var re = document.getElementById('11')
+	var re2 = document.getElementById('12')
+	re.remove()
+	re2.remove()
 	document.getElementById('people').innerHTML = Object.keys(original_data).join(",  ")
 	current_question = get_question(original_data)
 	document.getElementById('question').innerHTML = current_question
