@@ -1,10 +1,41 @@
+function noInfo(cha , min, data) {
+	dict = data[cha]
+	var count = 0
+	Object.keys(dict).forEach(q => {
+		if (dict[q] != null) {
+			count++
+		}
+	})
+	if (count < min) {
+		return true
+	}
+	return false
+}
+
+
+function sort(data) {
+	let n = Object.keys(data).length
+	console.log("data length - before: " + n)
+	var min = n + Math.log(n)/Math.log(2) * 1.5
+	console.log("minimum count: " + min)
+	Object.keys(data).forEach(c => {
+		if (noInfo(c, min, data)) {
+			delete data[c]
+		}
+	})	
+	console.log("data length - after: " + Object.keys(data).length)
+	return data
+}
+
+
 function start() {
 	var re = document.getElementById('11')
 	var re2 = document.getElementById('12')
 	re.remove()
 	re2.remove()
-	document.getElementById('people').innerHTML = Object.keys(original_data).join(",  ")
-	current_question = get_question(original_data)
+	sorted_data = sort(original_data)
+	document.getElementById('people').innerHTML = Object.keys(sorted_data).join(",  ")
+	current_question = get_question(sorted_data)
 	document.getElementById('question').innerHTML = current_question
 }
 
@@ -156,3 +187,11 @@ function dontKnow() {
 	document.getElementById('question').innerHTML = current_question
 	console.log("don't know")
 	}
+
+function info() {
+	window.location.href = "info.html";
+}
+
+function back() {
+	window.location.href = "index.html";
+}

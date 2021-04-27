@@ -1,46 +1,38 @@
-
 body {
-  background: #202020
-}
-a#counter {
-  height: 100%;
-  font-size: 50px;
-  padding: 0 40px;
-  margin: auto;
-  font-family: Harry Potter;
-}
-h1 {
-  font-size: 150px;
-  text-align: center;
-  background-image: url(https://media.giphy.com/media/8uk5BEvTsZ7Og/giphy.gif);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-repeat: round;
-  font-family: Harry Potter;
-  letter-spacing: 15px;
-  text-shadow: 0 0 30px #c0c0c0;
-  opacity: 1;
-  animation: title 3s ease-in-out 1 forwards;
-}
-h2 {
-	font-size: 50px;
-	margin: 0 400px;
-  margin-bottom: 100px; 
-	text-align: center;
-  color: white;
+	background: #202020;
+	justify-content: center;
 }
 
 label {
+  font-size: 30px;
+  text-align: center;
+  display: block;
+}
+
+h1 {
+  color: green; 
+  font-size: 100px;
+  text-align: center;
+}	
+
+button {
   margin: auto;
   font-size: 30px;
-  text-align: right;
-  position: fixed;
+  border-radius: 10px 10px;
+  width: 15%;
+  border-width: 0; 
+  display: inline-grid;
+  cursor: pointer;
+  color:#ffffff;
+  font-family: Arial;
+  padding:20px 44px;
+  color: green;
 
 }
 
-hr {
-  border-top: 8px solid #bbb;
-  border-radius: 5px;
+button:hover {
+	transition: 1s;
+	animation: anim 2s ease-in-out infinite alternate;
 }
 
 div#bar {
@@ -49,27 +41,12 @@ div#bar {
   
 }
 
-div.container {
-  display: flex;
-}
-
-div#people_container {
-  color: #337b5d;
-}
-div .animation_container {
+div.animation_container {
   display: flex;
   justify-content: center;
-  margin: 5% auto;
-}
-.one {
   position: fixed;
-  top: 40%;
+  top: 10%;
   left: 10%;
-}
-.two {
-  position: fixed;
-  top: 40%;
-  left: 80%;
 }
 
 div.cool {
@@ -88,54 +65,6 @@ div.cool2 {
     width: 30px;
     border: 10px solid;
     animation: square 4s ease-in-out infinite forwards;
-}
-button {
-  margin: auto;
-  font-size: 30px;
-  border-radius: 10px 10px;
-  width: 15%;
-  border-width: 0; 
-  display: inline-grid;
-  cursor: pointer;
-  color:#ffffff;
-  font-family: Arial;
-  padding:20px 44px;
-
-}
-
-button#info {
-  color: green;
-
-}
-
-button:hover {
-	transition: 1s;
-	animation: anim 2s ease-in-out infinite alternate;
-}
-
-
-#yes_button {
-	background-color:#5cbf2a;
-}
-
-#no_button {
-	background-color:#df2323;
-}
-#dont_know {
-	background-color:#999999;
-}
-#start {
-	background-color:#aa11aa;
-}
-
-@font-face {
-  font-family: Harry Potter;
-  src: url("HarryPotterFont.ttf");
-}
-
-@font-face {
-  font-family: Gan;
-  src: url("Gan.ttf");
 }
 
 @keyframes anim {
@@ -193,23 +122,3 @@ button:hover {
         transform: rotate(0);
       }        
 }
-
-@keyframes title {
-  0% {
-    opacity: 0;
-    letter-spacing: 25px;
-  }
-
-  100% {
-    opacity: initial;
-    letter-spacing: initial;
-  }
-}
-
-
-
-
-
-
-
-
